@@ -1,0 +1,3 @@
+# Future-proof client-side routes on Cloudflare Pages.
+# Static files still resolve normally; unmatched routes fall back to index.html.
+/* /index.html 200
