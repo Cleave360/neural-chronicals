@@ -104,6 +104,8 @@ Expected current state:
 - build succeeds
 - production audit reports zero vulnerabilities
 
+For a full release-day runbook, see `LAUNCH_CHECKLIST.md` in the repository root.
+
 ## Future Issues
 
 - Use `app_2` as the starting template for the next publication.
