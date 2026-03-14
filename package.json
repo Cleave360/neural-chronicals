@@ -5,6 +5,9 @@
   "scripts": {
     "build": "npm --prefix app ci && npm --prefix app run build",
     "lint": "npm --prefix app run lint",
-    "deploy": "npm run build && npx wrangler deploy"
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.73.0"
   }
 }
