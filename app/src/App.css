@@ -261,6 +261,43 @@ html {
   }
 }
 
+/* Editorial text hierarchy */
+.section-subtitle {
+  color: #d2d9e6;
+  font-size: clamp(1.05rem, 1rem + 0.35vw, 1.2rem);
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.body-copy {
+  color: #c9d1df;
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.body-copy-sm {
+  color: #c2cbda;
+  font-size: 0.95rem;
+  line-height: 1.66;
+}
+
+.meta-copy {
+  color: #adb8cb;
+}
+
+/* Contrast boost for editorial readability in bright environments. */
+.text-gray-300 {
+  color: #d7deea !important;
+}
+
+.text-gray-400 {
+  color: #cdd6e5 !important;
+}
+
+.text-gray-500 {
+  color: #b7c3d8 !important;
+}
+
 /* Focus states */
 button:focus-visible,
 a:focus-visible {

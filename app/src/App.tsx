@@ -106,7 +106,7 @@ function HeroSection() {
           <span className="text-white">CHRONICLE</span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-gray-400 mb-4 font-light">
+        <p className="text-xl md:text-2xl text-gray-200 mb-4 font-medium">
           The Monthly Pulse of Artificial Intelligence
         </p>
         
@@ -226,7 +226,7 @@ function NewsSection() {
           <span className="text-electric-purple text-sm tracking-widest uppercase">This Month</span>
         </div>
         <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-4">The Latest Pulse</h2>
-        <p className="text-gray-400 text-lg mb-12 max-w-2xl">This month&apos;s breakthroughs and paradigm shifts in artificial intelligence.</p>
+        <p className="section-subtitle mb-12 max-w-2xl">This month&apos;s breakthroughs and paradigm shifts in artificial intelligence.</p>
 
         <div className="grid md:grid-cols-2 gap-8">
           {newsItems.map((item, index) => (
@@ -255,7 +255,7 @@ function NewsSection() {
                 <h3 className="font-display font-bold text-xl text-white mb-3 group-hover:text-electric-purple transition-colors line-clamp-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-400 text-sm line-clamp-3">{item.excerpt}</p>
+                <p className="body-copy-sm line-clamp-3">{item.excerpt}</p>
                 <div className="mt-4 flex items-center gap-2 text-electric-purple">
                   <span className="text-sm font-medium">Read More</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -284,7 +284,11 @@ function WhosWhoSection() {
       role: 'CEO, Google DeepMind',
       description: 'Nobel laureate and pioneer in AI research. His work on AlphaFold has revolutionized structural biology and demonstrated AI\'s potential for scientific discovery.',
       image: '/leader-2.jpg',
-      company: 'DeepMind'
+      company: 'DeepMind',
+      imageStyle: {
+        transform: 'scale(1.48)',
+        transformOrigin: '52% 16%'
+      } as React.CSSProperties
     },
     {
       name: 'Fei-Fei Li',
@@ -310,7 +314,7 @@ function WhosWhoSection() {
           <span className="text-electric-purple text-sm tracking-widest uppercase">Visionaries</span>
         </div>
         <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-4">Architects of Tomorrow</h2>
-        <p className="text-gray-400 text-lg mb-16 max-w-2xl">The minds forging our intelligent future, leading the labs and institutions that define the frontier.</p>
+        <p className="section-subtitle mb-16 max-w-2xl">The minds forging our intelligent future, leading the labs and institutions that define the frontier.</p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {leaders.map((leader, index) => (
@@ -318,11 +322,12 @@ function WhosWhoSection() {
               key={index} 
               className="group relative"
             >
-              <div className="relative overflow-hidden rounded-xl aspect-[3/4] mb-6">
+              <div className="relative overflow-hidden rounded-xl aspect-[3/4] mb-6 bg-charcoal">
                 <img 
                   src={leader.image} 
                   alt={leader.name}
-                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                  className={`w-full h-full object-cover transition-all duration-500 ${leader.imageStyle ? '' : 'group-hover:scale-105'}`}
+                  style={leader.imageStyle}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -333,7 +338,7 @@ function WhosWhoSection() {
               </div>
               <h3 className="font-display font-bold text-xl text-white mb-1">{leader.name}</h3>
               <p className="text-electric-purple text-sm mb-3">{leader.role}</p>
-              <p className="text-gray-500 text-sm leading-relaxed">{leader.description}</p>
+              <p className="body-copy-sm">{leader.description}</p>
             </div>
           ))}
         </div>
@@ -401,7 +406,7 @@ function HardwareSection() {
           <span className="text-electric-purple text-sm tracking-widest uppercase">Physical Intelligence</span>
         </div>
         <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-4">Silicon & Soul</h2>
-        <p className="text-gray-400 text-lg mb-16 max-w-2xl">The physical manifestation of intelligence—chips, robots, and the hardware that powers the AI revolution.</p>
+        <p className="section-subtitle mb-16 max-w-2xl">The physical manifestation of intelligence—chips, robots, and the hardware that powers the AI revolution.</p>
 
         <div className="space-y-16">
           {hardware.map((item, index) => (
@@ -426,7 +431,7 @@ function HardwareSection() {
                 </div>
                 <h3 className="font-display font-bold text-3xl text-white">{item.name}</h3>
                 <p className="text-lg text-gray-300 font-mono">{item.specs}</p>
-                <p className="text-gray-400 leading-relaxed">{item.description}</p>
+                <p className="body-copy">{item.description}</p>
                 <div className="flex items-center gap-2 pt-4">
                   <div className="h-px flex-1 bg-gradient-to-r from-electric-purple/50 to-transparent" />
                   <TrendingUp className="w-5 h-5 text-electric-purple" />
@@ -481,7 +486,7 @@ function AgenticSection() {
           <span className="text-electric-purple text-sm tracking-widest uppercase">Autonomous Systems</span>
         </div>
         <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-4">Agentic As A Service</h2>
-        <p className="text-gray-400 text-lg mb-16 max-w-2xl">Deploying autonomous agents safely and at scale—best practices from the frontier.</p>
+        <p className="section-subtitle mb-16 max-w-2xl">Deploying autonomous agents safely and at scale—best practices from the frontier.</p>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* The How-To */}
@@ -501,7 +506,7 @@ function AgenticSection() {
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center text-green-500 text-sm font-bold">
                     {index + 1}
                   </span>
-                  <p className="text-gray-300">{item}</p>
+                  <p className="body-copy-sm">{item}</p>
                 </div>
               ))}
             </div>
@@ -524,7 +529,7 @@ function AgenticSection() {
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center text-red-500 text-sm font-bold">
                     {index + 1}
                   </span>
-                  <p className="text-gray-300">{item}</p>
+                  <p className="body-copy-sm">{item}</p>
                 </div>
               ))}
             </div>
@@ -537,7 +542,7 @@ function AgenticSection() {
             <Shield className="w-8 h-8 text-electric-purple flex-shrink-0 mt-1" />
             <div>
               <h4 className="font-display font-bold text-xl text-white mb-3">Key Insight</h4>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="body-copy">
                 Agentic AI fails in production not from model quality issues, but from unclear ownership, 
                 weak governance, and limited visibility once agents act autonomously across systems. 
                 Success requires balancing agent independence with defined boundaries, auditability, 
@@ -557,7 +562,7 @@ function AgenticSection() {
             <div key={index} className="p-6 glass rounded-xl hover:border-electric-purple/50 transition-colors">
               <tool.icon className="w-8 h-8 text-electric-purple mb-4" />
               <h4 className="font-semibold text-white mb-2">{tool.title}</h4>
-              <p className="text-sm text-gray-500">{tool.desc}</p>
+              <p className="text-sm meta-copy">{tool.desc}</p>
             </div>
           ))}
         </div>
@@ -637,7 +642,7 @@ function PoetrySection() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="glass rounded-xl p-6 border border-electric-purple/10">
               <h4 className="font-display font-semibold text-white mb-3">The Process</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="body-copy-sm">
                 This poem was crafted through iterative dialogue with Claude, exploring themes of 
                 consciousness, emergence, and the relationship between human and machine intelligence. 
                 The AI was asked to reflect on its own nature through metaphor and verse.
@@ -645,7 +650,7 @@ function PoetrySection() {
             </div>
             <div className="glass rounded-xl p-6 border border-electric-purple/10">
               <h4 className="font-display font-semibold text-white mb-3">The Form</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="body-copy-sm">
                 Written in ABAB rhyme scheme with iambic meter, the poem draws from Romantic 
                 traditions while exploring distinctly contemporary themes. The structure mirrors 
                 the tension between classical expression and digital emergence.
@@ -689,7 +694,7 @@ function ShowcaseSection() {
           <span className="text-electric-purple text-sm tracking-widest uppercase">Visual Arts</span>
         </div>
         <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-4">Showcase</h2>
-        <p className="text-gray-400 text-lg mb-16 max-w-2xl">Visual artifacts from the edge—AI-generated art exploring the nature of intelligence.</p>
+        <p className="section-subtitle mb-16 max-w-2xl">Visual artifacts from the edge—AI-generated art exploring the nature of intelligence.</p>
 
         <div className="grid md:grid-cols-3 gap-6 auto-rows-[300px]">
           <div className="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-xl">
@@ -701,7 +706,7 @@ function ShowcaseSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-void via-void/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
               <h3 className="font-display font-bold text-2xl text-white">{items[0].title}</h3>
-              <p className="text-gray-400">{items[0].description}</p>
+              <p className="body-copy-sm">{items[0].description}</p>
             </div>
           </div>
           <div className="md:row-span-2 group relative overflow-hidden rounded-xl">
@@ -713,7 +718,7 @@ function ShowcaseSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-void via-void/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
               <h3 className="font-display font-bold text-xl text-white">{items[1].title}</h3>
-              <p className="text-gray-400">{items[1].description}</p>
+              <p className="body-copy-sm">{items[1].description}</p>
             </div>
           </div>
           <div className="md:col-span-3 group relative overflow-hidden rounded-xl">
@@ -725,7 +730,7 @@ function ShowcaseSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-void via-void/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
               <h3 className="font-display font-bold text-xl text-white">{items[2].title}</h3>
-              <p className="text-gray-400">{items[2].description}</p>
+              <p className="body-copy-sm">{items[2].description}</p>
             </div>
           </div>
         </div>
