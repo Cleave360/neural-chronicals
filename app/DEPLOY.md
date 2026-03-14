@@ -17,13 +17,17 @@
 
 ## Routing
 
-This app currently behaves as a static magazine with no client-side router, but the deploy includes `public/_redirects`:
+This app currently behaves as a static magazine with no client-side router.
 
-```text
-/* /index.html 200
+For Wrangler Workers Assets deploys, SPA fallback is configured in `wrangler.toml`:
+
+```toml
+[assets]
+directory = "./app/dist"
+not_found_handling = "single-page-application"
 ```
 
-That redirect allows future client-side routes to resolve through `index.html` on Cloudflare Pages.
+Do not add a `public/_redirects` catch-all rule when using Wrangler, as it can trigger redirect loop validation errors.
 
 ## Headers And Caching
 

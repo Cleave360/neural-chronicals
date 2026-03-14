@@ -23,4 +23,5 @@ See `DEPLOY.md` for the exact Pages configuration, headers, caching behavior, an
 ## Notes
 
 - `app_2` is kept as a template for a future publication.
-- The production build includes Cloudflare `_headers` and `_redirects` files from `public`.
+- The production build includes Cloudflare `_headers` from `public`.
+- SPA fallback behavior is handled by `wrangler.toml` (`not_found_handling = "single-page-application"`).
