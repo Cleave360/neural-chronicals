@@ -1,5 +1,11 @@
 name = "neural-chronicals"
 compatibility_date = "2026-03-14"
+workers_dev = false
+
+routes = [
+	{ pattern = "neural-chronicals.uk", custom_domain = true },
+	{ pattern = "www.neural-chronicals.uk", custom_domain = true }
+]
 
 [assets]
 directory = "./app/dist"
