@@ -1,0 +1,9 @@
+{
+  "name": "neural-chronicles-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm --prefix app ci && npm --prefix app run build",
+    "lint": "npm --prefix app run lint"
+  }
+}
