@@ -21,3 +21,10 @@ pnpm-debug.log*
 # Environment files
 .env
 .env.*
+
+# Kindred local runtime artifacts (do not commit)
+.kindred/audit/
+.kindred/executions/
+.kindred/export/
+.kindred/locks/
+.kindred/tmp/
