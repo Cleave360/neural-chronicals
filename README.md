@@ -13,6 +13,7 @@ This repository is the root project workspace for:
 - `app/` - Main publication web app (React + Vite + TypeScript)
 - `app_2/` - Template copy for future publication experiments
 - `issue_2/` - Issue 02 research package, Kimi artifacts, and data tables
+- `runs/` - Publication gate artifacts and coordination handoffs (tracked for audit trail)
 - `security/` - Security notes and workflow snippets
 - `handoff.md` - Cross-agent coordination log (append-only)
 - `wrangler.toml` - Cloudflare Workers deployment config
@@ -32,7 +33,7 @@ To work directly on the publication app:
 1. `cd app`
 2. `npm run dev`
 
-Default local dev URL is usually `http://localhost:5173`.
+Default local dev URL is `http://localhost:5190`.
 
 ## Deployment
 
@@ -44,6 +45,13 @@ Production deployment is configured at the repository root and uses Cloudflare W
 
 ## Notes
 
+- `runs/` stores tracked publication gate artifacts (decision trail for agents).
 - `.kindred/` stores local orchestration/runtime artifacts. See `.kindred/README.md`.
-- Runtime `.kindred` paths are ignored by git.
+- Runtime `.kindred` paths are ignored by git; `runs/` paths are tracked.
 - If sanitized fixtures are needed for docs/tests, commit only approved fixture artifacts.
+
+## Python Policy
+
+- This repository is Node-first. A local `.venv` is not required for normal workflows.
+- Agents may use global `python3` only when a specific task requires Python.
+- Do not introduce Python dependencies unless there is a concrete implementation need.

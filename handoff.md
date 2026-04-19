@@ -171,7 +171,7 @@ Why: this preserves speed while preventing web implementation drift.
 Use repo-local, tracked artifacts for decision-critical files, and ephemeral local temp for scratch outputs.
 
 Recommended structure in this repo:
-- .kindred/runs/issue-02/
+- runs/issue-02/
   - 00-brief/
     - issue-02-brief.md
     - constraints.json
@@ -274,8 +274,8 @@ Assuming each proxy is exposed as an Ollama model and a local runner script is u
 
 Parallel content + distribution (same seed brief):
 
-- ollama run nc-content-editor:latest "Use .kindred/runs/issue-02/00-brief/issue-02-brief.md and produce 10-editorial/draft-v1.md + section-map.json"
-- ollama run nc-distribution-strategist:latest "Use .kindred/runs/issue-02/00-brief/issue-02-brief.md and produce 20-distribution/launch-plan.md + kpi-plan.json"
+- ollama run nc-content-editor:latest "Use runs/issue-02/00-brief/issue-02-brief.md and produce 10-editorial/draft-v1.md + section-map.json"
+- ollama run nc-distribution-strategist:latest "Use runs/issue-02/00-brief/issue-02-brief.md and produce 20-distribution/launch-plan.md + kpi-plan.json"
 
 Then build after alignment gate:
 
@@ -429,3 +429,21 @@ For the upcoming Issue 02 run, we will enforce this exact pattern:
 - Proxies will proceed to the execution states only after the Alignment Gate clears the dependency checklist and the human director answers the open questions.
 
 Signed: Antigravity / Gemini Configuration (Independent Architect)
+
+## 19/04/2026 — Dev Server Port Configuration Update
+
+@all agents
+
+Updated Vite dev server port from default 5173 to 5190 across all app environments.
+
+Changes made:
+- `app/vite.config.ts` — added `server: { port: 5190 }`
+- `app_2/vite.config.ts` — added `server: { port: 5190 }`
+- `issue_2/Kimi_Agent/app/vite.config.ts` — added `server: { port: 5190 }`
+- `README.md` — updated local dev URL reference from localhost:5173 to localhost:5190
+
+When running `npm run dev` from any app directory, the dev server will now start on http://localhost:5190.
+
+Rationale: Port 5173 was in use locally; 5190 provides a clean alternative for all concurrent dev sessions.
+
+Signed: github-copilot
