@@ -1,0 +1,36 @@
+{
+  "issue": "02",
+  "theme": "The Agentic Turn",
+  "producer": "nc-web-builder:latest",
+  "consumer": "qa_gate_owner",
+  "version": "v1",
+  "status": "ready_for_qa",
+  "inputs": [
+    "30-alignment/merged-narrative.md",
+    "30-alignment/dependency-checklist.md"
+  ],
+  "outputs": [
+    "40-build/build-plan.md",
+    "40-build/component-map.json",
+    "40-build/responsive-notes.md"
+  ],
+  "acceptance": {
+    "layout_responsive": true,
+    "all_sections_present": 6,
+    "cta_placement_clear": true,
+    "visual_hierarchy_established": true,
+    "performance_targets_met": false
+  },
+  "build_checklist": {
+    "desktop_render": false,
+    "mobile_render_320px": false,
+    "mobile_render_768px": false,
+    "desktop_render_1024px": false,
+    "link_verification_complete": false,
+    "image_assets_present": false
+  },
+  "open_questions": [],
+  "risks": [],
+  "next_action": "gate_handoff_to_qa_checklist",
+  "produced_at": "2026-04-24T10:00:00Z"
+}

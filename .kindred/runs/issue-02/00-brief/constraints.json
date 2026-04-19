@@ -1,0 +1,72 @@
+{
+  "issue": "02",
+  "theme": "The Agentic Turn",
+  "discovery_gate_date": "2026-04-18",
+  "publication_target": "2026-05-15",
+  "timeline_weeks": 3,
+  "editorial_structure": [
+    "The Latest Pulse",
+    "Architects of Tomorrow",
+    "Silicon and Soul",
+    "Agentic As A Service",
+    "Synthetic Verse",
+    "Visual Showcase"
+  ],
+  "audience": {
+    "primary": "builders, researchers, decision makers",
+    "secondary": "investors, operators, policy watchers"
+  },
+  "tone": "confident, concrete, readable by both builders and business stakeholders",
+  "aesthetic": {
+    "visual_identity": "high-contrast, editorial, cinematic but readable",
+    "scan_friendly": true,
+    "hierarchy": "clear_section_priority",
+    "flow": "signal → insight → action"
+  },
+  "editorial_constraints": {
+    "fact_checking_required": true,
+    "max_unresolved_questions": 3,
+    "primary_sources_preferred": true,
+    "concurrent_section_overlap_allowed": true
+  },
+  "technical_constraints": {
+    "breaking_changes_issue_01": false,
+    "mobile_browser_legacy_support": true,
+    "max_page_size_mb": 2,
+    "responsive_breakpoints": [320, 768, 1024]
+  },
+  "performance_targets": {
+    "first_contentful_paint_sec": 3,
+    "lighthouse_accessibility": 90,
+    "lighthouse_performance": 85,
+    "pages_per_issue": 1
+  },
+  "distribution_constraints": {
+    "channel_minimum": 3,
+    "social_variants": 3,
+    "email_teasers": 1,
+    "cadence_strategy": "weekly_drip"
+  },
+  "known_risks": [
+    "source availability limited for best-in-class examples",
+    "agentic tech moving fast; lock narrative by end of week 2",
+    "platform policy changes on AI content may affect distribution"
+  ],
+  "milestone_gates": [
+    {
+      "week": 1,
+      "gate": "discovery_and_outline_complete",
+      "deliverable": "editorial_outline.md"
+    },
+    {
+      "week": 2,
+      "gate": "draft_content_and_build_prep_complete",
+      "deliverable": "draft_v1.md, distribution_plan.md"
+    },
+    {
+      "week": 3,
+      "gate": "qa_and_launch_candidate",
+      "deliverable": "signoff.json, publish_candidate"
+    }
+  ]
+}

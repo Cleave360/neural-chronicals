@@ -1,0 +1,36 @@
+{
+  "issue": "02",
+  "theme": "The Agentic Turn",
+  "producer": "nc-distribution-strategist:latest",
+  "consumer": "nc-web-builder:latest",
+  "version": "v1",
+  "status": "ready_for_build",
+  "inputs": [
+    "00-brief/issue-02-brief.md",
+    "10-editorial/draft-v1.md",
+    "10-editorial/section-map.json",
+    "20-distribution/launch-plan.md",
+    "20-distribution/kpi-plan.json"
+  ],
+  "outputs": [
+    "30-alignment/merged-narrative.md",
+    "30-alignment/dependency-checklist.md"
+  ],
+  "acceptance": {
+    "editorial_sections_present": 6,
+    "distribution_channels_minimum": 3,
+    "launch_cadence_defined": true,
+    "tone_unified": true
+  },
+  "alignment_checklist": {
+    "section_copy_approved": false,
+    "channel_strategy_aligned": false,
+    "visual_rhythm_planned": false,
+    "no_conflicting_dates": true,
+    "launch_date_locked": false
+  },
+  "open_questions": [],
+  "risks": [],
+  "next_action": "gate_handoff_to_nc_web_builder",
+  "produced_at": "2026-04-20T10:00:00Z"
+}

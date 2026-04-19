@@ -1,0 +1,42 @@
+{
+  "issue": "02",
+  "theme": "The Agentic Turn",
+  "producer": "nc-content-editor:latest",
+  "consumer": "nc-distribution-strategist:latest",
+  "version": "v1",
+  "status": "ready_for_distribution",
+  "inputs": [
+    "00-brief/issue-02-brief.md",
+    "00-brief/constraints.json"
+  ],
+  "outputs": [
+    "10-editorial/draft-v1.md",
+    "10-editorial/section-map.json"
+  ],
+  "acceptance": {
+    "required_sections": [
+      "latest-pulse",
+      "architects-of-tomorrow",
+      "silicon-and-soul",
+      "agentic-as-a-service",
+      "synthetic-verse",
+      "visual-showcase"
+    ],
+    "tone": "confident-concrete-readable",
+    "max_open_questions": 3,
+    "fact_check_status": "primary"
+  },
+  "milestone_completion": {
+    "editorial_outline": true,
+    "draft_complete": true,
+    "brand_voice_consistent": true,
+    "source_citations_present": true
+  },
+  "open_questions": [],
+  "risks": [],
+  "dependencies": [
+    "researcher interviews for best-in-class examples"
+  ],
+  "next_action": "distribute_to_nc_distribution_strategist",
+  "produced_at": "2026-04-19T10:00:00Z"
+}

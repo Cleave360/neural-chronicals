@@ -91,7 +91,7 @@ function HeroSection() {
           transition: 'transform 0.3s ease-out'
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-void/50 to-void" />
+      <div className="readability-layer readability-layer--hero" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
@@ -240,7 +240,7 @@ function NewsSection() {
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-transparent" />
+                <div className="readability-layer readability-layer--card" />
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1 text-xs font-medium bg-electric-purple/20 text-electric-purple rounded-full border border-electric-purple/30">
                     {item.category}
@@ -329,7 +329,7 @@ function WhosWhoSection() {
                   className={`w-full h-full object-cover transition-all duration-500 ${leader.imageStyle ? '' : 'group-hover:scale-105'}`}
                   style={leader.imageStyle}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent" />
+                <div className="readability-layer readability-layer--card" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <span className="px-3 py-1 text-xs font-medium bg-electric-purple/30 text-white rounded-full backdrop-blur-sm">
                     {leader.company}
@@ -421,7 +421,7 @@ function HardwareSection() {
                     alt={item.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-charcoal/50 to-transparent" />
+                  <div className="readability-layer readability-layer--side" />
                 </div>
               </div>
               <div className="flex-1 space-y-4">
@@ -584,7 +584,7 @@ function PoetrySection() {
           backgroundPosition: 'center'
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal/90 to-charcoal" />
+      <div className="readability-layer readability-layer--hero" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <div className="flex items-center justify-center gap-4 mb-4">
@@ -703,10 +703,10 @@ function ShowcaseSection() {
               alt={items[0].title}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-void via-void/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-              <h3 className="font-display font-bold text-2xl text-white">{items[0].title}</h3>
-              <p className="body-copy-sm">{items[0].description}</p>
+            <div className="readability-layer readability-layer--card opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 safe-caption-zone translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <h3 className="font-display font-bold text-2xl safe-image-title">{items[0].title}</h3>
+              <p className="body-copy-sm safe-image-copy">{items[0].description}</p>
             </div>
           </div>
           <div className="md:row-span-2 group relative overflow-hidden rounded-xl">
@@ -715,10 +715,10 @@ function ShowcaseSection() {
               alt={items[1].title}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-void via-void/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-              <h3 className="font-display font-bold text-xl text-white">{items[1].title}</h3>
-              <p className="body-copy-sm">{items[1].description}</p>
+            <div className="readability-layer readability-layer--card opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 safe-caption-zone translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <h3 className="font-display font-bold text-xl safe-image-title">{items[1].title}</h3>
+              <p className="body-copy-sm safe-image-copy">{items[1].description}</p>
             </div>
           </div>
           <div className="md:col-span-3 group relative overflow-hidden rounded-xl">
@@ -727,10 +727,10 @@ function ShowcaseSection() {
               alt={items[2].title}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-void via-void/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-              <h3 className="font-display font-bold text-xl text-white">{items[2].title}</h3>
-              <p className="body-copy-sm">{items[2].description}</p>
+            <div className="readability-layer readability-layer--card opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 safe-caption-zone translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <h3 className="font-display font-bold text-xl safe-image-title">{items[2].title}</h3>
+              <p className="body-copy-sm safe-image-copy">{items[2].description}</p>
             </div>
           </div>
         </div>

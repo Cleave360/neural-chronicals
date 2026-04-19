@@ -5,6 +5,56 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Image readability guardrails (no vision model required) */
+.readability-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.readability-layer--hero {
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 5, 5, 0.28) 0%,
+    rgba(5, 5, 5, 0.52) 45%,
+    rgba(5, 5, 5, 0.9) 100%
+  );
+}
+
+.readability-layer--card {
+  background: linear-gradient(
+    to top,
+    rgba(5, 5, 5, 0.9) 0%,
+    rgba(5, 5, 5, 0.45) 55%,
+    rgba(5, 5, 5, 0.15) 100%
+  );
+}
+
+.readability-layer--side {
+  background: linear-gradient(
+    to right,
+    rgba(5, 5, 5, 0.7) 0%,
+    rgba(5, 5, 5, 0.28) 40%,
+    rgba(5, 5, 5, 0) 100%
+  );
+}
+
+.safe-caption-zone {
+  background: linear-gradient(to top, rgba(5, 5, 5, 0.88), rgba(5, 5, 5, 0.4));
+  border-top: 1px solid rgba(135, 41, 255, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.safe-image-title {
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+}
+
+.safe-image-copy {
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.75);
+}
+
 /* Custom animations */
 @keyframes fadeInUp {
   from {
