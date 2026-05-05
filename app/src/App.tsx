@@ -41,7 +41,7 @@ function Navigation() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'glass' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-display font-bold text-xl gradient-text">NEURAL CHRONICALS</div>
+          <div className="font-display font-bold text-xl gradient-text">NEURAL CHRONICLES</div>
           <div className="hidden md:flex items-center gap-8">
             {[
               { label: 'Pulse', id: 'news' },
@@ -745,7 +745,7 @@ function Footer() {
     <footer className="py-16 bg-charcoal border-t border-electric-purple/20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col items-center text-center">
-          <h2 className="font-display font-black text-4xl gradient-text mb-4">NEURAL CHRONICALS</h2>
+          <h2 className="font-display font-black text-4xl gradient-text mb-4">NEURAL CHRONICLES</h2>
           <p className="text-gray-400 mb-8">The future is intelligent.</p>
           
           <div className="flex items-center gap-6 mb-12">
@@ -761,16 +761,16 @@ function Footer() {
           </div>
 
           <a
-            href="mailto:team@neural-chronicals.uk"
+            href="mailto:team@neural-chronicles.uk"
             className="text-sm text-electric-purple hover:text-electric-purple/80 transition-colors mb-8"
           >
-            team@neural-chronicals.uk
+            team@neural-chronicles.uk
           </a>
 
           <div className="section-divider w-full max-w-md mb-8" />
           
           <p className="text-sm text-gray-600">
-            © 2026 Neural Chronicals. All rights reserved.
+            © 2026 Neural Chronicles. All rights reserved.
           </p>
           <p className="text-xs text-gray-700 mt-2">
             Curated with AI assistance. Designed for human readers.
